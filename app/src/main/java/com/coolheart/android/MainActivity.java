@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     return "ListView (Basic)";
                 case 1:
                     return "ListView (Custom)";
-                case 1:
+                case 2:
                     return "Recycler View";
                 default:
                     return "Tab " + (position + 1);
