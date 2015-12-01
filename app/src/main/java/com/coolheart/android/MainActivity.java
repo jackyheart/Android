@@ -16,6 +16,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    int NUM_TABS = 4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+
+            return NUM_TABS;
         }
 
         @Override
@@ -109,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
                     return new Tab2Fragment();
                 case 2:
                     return new Tab3Fragment();
+                case 3:
+                    return new Tab4Fragment();
                 default:
                     return null;
             }
@@ -125,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
                     return "ListView (Custom)";
                 case 2:
                     return "Recycler View";
+                case 3:
+                    return "Shared Preferences";
                 default:
                     return "Tab " + (position + 1);
             }
